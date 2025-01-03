@@ -1,24 +1,42 @@
 import MenuLink from "../MenuLink"
-import styles from "./Menu.module.css"
+import { styled } from "styled-components";
+import Logo from "/assets/logo.png"
+
+const MenuNav = styled.nav`
+    .navegacao {
+        display: flex;
+        flex-direction: row;
+}
+`
+const MenuLista = styled.ul`
+    display: flex;
+    flex-direction: row;
+`
+
+const MenuItem = styled.li`
+    .menu li {
+    list-style-type: none;
+}
+`
 
 export default function Menu() {
     return (
         <>
-            <img src="assets/logo.png" alt="Logo AluraFlix" />
-            <nav className={styles.menu}>
-                <ul className={styles.menu}>
-                    <li>
+            <img src={Logo} alt="Logo AluraFlix" />
+            <MenuNav>
+                <MenuLista>
+                    <MenuItem>
                         <MenuLink to="/">
                             HOME
                         </MenuLink>
-                    </li>
-                    <li>
+                    </MenuItem>
+                    <MenuItem>
                         <MenuLink to="/novovideo">
                             NOVO VÍDEO
                         </MenuLink>
-                    </li>
-                </ul>
-            </nav>
+                    </MenuItem>
+                </MenuLista>
+            </MenuNav>
         </>
     )
 }

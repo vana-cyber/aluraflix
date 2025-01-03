@@ -8,9 +8,10 @@ export default defineConfig({
     alias: {
       "assets": "/src/assets",
       "components": "/src/components",
-    "MenuLink": "/src/components/MenuLink",
-    "paginas": "/src/paginas",
-    "NovoVideo": "/src/paginas/NovoVideo",
+      "MenuLink": "/src/components/MenuLink",
+      "paginas": "/src/paginas",
+      "NovoVideo": "/src/paginas/NovoVideo",
+      "Logo": "/src/assets/logo.png"
       }
     }
   })
