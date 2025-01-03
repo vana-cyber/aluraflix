@@ -1,6 +1,5 @@
 import MenuLink from "../MenuLink"
 import { styled } from "styled-components";
-import Logo from "/assets/logo.png"
 
 const MenuNav = styled.nav`
     .navegacao {
@@ -11,22 +10,23 @@ const MenuNav = styled.nav`
 const MenuLista = styled.ul`
     display: flex;
     flex-direction: row;
+    list-style-type: none;
+    gap: 2.5rem;
 `
 
 const MenuItem = styled.li`
-    .menu li {
-    list-style-type: none;
-}
+    li {
+        margin-left: 20px;
+    }
 `
 
-export default function Menu() {
+export default function Menu({ ativo = false}) {
     return (
         <>
-            <img src={Logo} alt="Logo AluraFlix" />
             <MenuNav>
                 <MenuLista>
                     <MenuItem>
-                        <MenuLink to="/">
+                        <MenuLink to="/" ativo={true}>
                             HOME
                         </MenuLink>
                     </MenuItem>

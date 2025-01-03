@@ -145,4 +145,4 @@ template {
   display: none;
 }
 `
-export default EstilosGlobais
+export default EstilosGlobais;

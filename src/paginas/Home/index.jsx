@@ -1,12 +1,12 @@
 import styles from './Home.module.css';
 
-export default function Home({ titulo, videos }) {
+export default function Home({ titulo }) {
     return (
         <>
             <main className={styles.containerVideos}>
                 <section className={styles.frontend}>
                     <h2>{titulo}</h2>
-                    <ul>
+                    {/* <ul>
                         {videos.map((video, index) => {
                             return (
                                 <li key={index}>
@@ -16,7 +16,7 @@ export default function Home({ titulo, videos }) {
                             )
                         }
                         )}
-                    </ul>
+                    </ul> */}
                 </section>
             </main>
         </>
