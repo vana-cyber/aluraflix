@@ -4,6 +4,7 @@ import Botao from '../Botao';
 const Formulario = styled.form`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1.5rem;
     margin: 0 auto;
     max-width: 40rem;
