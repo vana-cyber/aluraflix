@@ -4,6 +4,11 @@ import NovoVideo from "./paginas/NovoVideo";
 import Rodape from "./components/Rodape";
 import EstilosGlobais from "components/EstilosGlobais";
 import Cabecalho from "components/Cabecalho";
+import {styled} from "styled-components";
+
+const  Fundo = styled.div`
+  background-color: var(--cor-quartenaria);
+`
 
 function AppRoutes() {
 
@@ -11,7 +16,7 @@ function AppRoutes() {
     <>
       <BrowserRouter>
         <EstilosGlobais />
-
+        <Fundo>
         <Cabecalho />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,6 +24,7 @@ function AppRoutes() {
         </Routes>
 
         <Rodape />
+        </Fundo>
       </BrowserRouter>
     </>
   )

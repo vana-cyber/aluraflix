@@ -1,6 +1,18 @@
 import { createGlobalStyle } from 'styled-components'
 
 const EstilosGlobais = createGlobalStyle`
+:root {
+  --cor-primaria: #353535;
+  --cor-secundaria: #2271D1;
+  --cor-terciaria: #000000;
+  --cor-quartenaria: #1d1d1d;
+  --cor-borda-card: #6BD1FF;
+  --cor-card-front-end: lightblue;
+  --cor-card-back-end: lightgreen;
+  -cor-card-mobile: yellow;
+
+}
+
 html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 

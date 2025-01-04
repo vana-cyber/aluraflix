@@ -4,12 +4,15 @@ import {styled} from "styled-components";
 
 const Header = styled.header`
     display: flex;
-    justify-content: space-between;
-    background-color: #353535;
+    justify-content: space-around;
+    background-color: var(--cor-primaria);
     align-items: flex-start;
-    padding: 5rem;
-    padding-left: 10rem;
-    gap: 20rem;
+    padding: 3rem;;
+    width: 100vw;
+
+    img {
+        max-width: 10rem;
+    }
 `
 
 export default function Cabecalho() {
