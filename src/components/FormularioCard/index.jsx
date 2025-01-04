@@ -4,7 +4,7 @@ import Botao from '../Botao';
 const Formulario = styled.form`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 0 auto;
     max-width: 40rem;
     padding: 1rem;
@@ -31,6 +31,14 @@ const CampoTexto = styled.input`
     border-color: var(--cor-primaria);
     padding: 1rem;
     border-radius: 0.7rem;
+    width: 30rem
+`
+
+const AreaDeTexto = styled.textarea`
+    background-color: transparent;
+    padding: 5rem;
+    border-radius: 0.7rem;
+    border-color: var(--cor-primaria);
 `
 
 export default function FormularioCard() {
@@ -49,7 +57,7 @@ export default function FormularioCard() {
             <CampoTexto type="url" id="url" name="url" placeholder='Digite o link do vídeo' required />
 
             <Label className="descricao">Descrição</Label>
-            <textarea id="descricao" name="descricao" placeholder='Sobre o quê é esse vídeo?' required />
+            <AreaDeTexto id="descricao" name="descricao" placeholder='Sobre o quê é esse vídeo?' required />
 
             <ConteinerBotao>
                 <Botao />
