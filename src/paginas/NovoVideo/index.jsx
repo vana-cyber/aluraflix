@@ -2,6 +2,13 @@
 import styled from 'styled-components';
 import FormularioCard from '../../components/FormularioCard';
 
+const ConteinerNovoVideo = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+`
+
 const Titulo = styled.h1`
     color: var(--white);
     font-size: 2rem;
@@ -19,9 +26,11 @@ const Paragrafo = styled.p`
 export default function NovoVideo() {
     return (
         <>
-            <Titulo>NOVO VÍDEO</Titulo>
-            <Paragrafo>Complete o formulário para criar um novo card de vídeo.</Paragrafo>
-            <FormularioCard />
+            <ConteinerNovoVideo>
+                <Titulo>NOVO VÍDEO</Titulo>
+                <Paragrafo>Complete o formulário para criar um novo card de vídeo.</Paragrafo>
+                <FormularioCard />
+            </ConteinerNovoVideo>
         </>
     )
 }

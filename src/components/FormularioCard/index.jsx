@@ -4,7 +4,6 @@ import Botao from '../Botao';
 const Formulario = styled.form`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 1.5rem;
     margin: 0 auto;
     max-width: 40rem;
@@ -30,9 +29,10 @@ const ConteinerBotao = styled.div`
 const CampoTexto = styled.input`
     background-color: transparent;
     border-color: var(--cor-primaria);
+    text-align: flex-start;
     padding: 1rem;
     border-radius: 0.7rem;
-    width: 30rem
+    width: 30rem;
 `
 
 const AreaDeTexto = styled.textarea`
@@ -43,13 +43,14 @@ const AreaDeTexto = styled.textarea`
 `
 
 export default function FormularioCard() {
+
     return (
         <Formulario>
             <Label className="titulo">Título</Label>
             <CampoTexto type="text" id="titulo" name="titulo" placeholder='Digite o título do vídeo' required />
 
             <Label className="categoria">Categoria</Label>
-            <CampoTexto type="url" id="url" name="url" required />
+            <select type="url" id="url" name="url" required />
 
             <Label className="imagem">Imagem</Label>
             <CampoTexto type="url" id="url" name="url" placeholder='Digite o link da imagem' required />

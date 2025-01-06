@@ -1,4 +1,3 @@
-import styles from './Botao.module.css';
 import {styled} from 'styled-components';
 
 const Button = styled.button`
@@ -20,10 +19,10 @@ const Button = styled.button`
 export default function Botao() {
     return (
         <>
-            <Button className={styles.botao} type="submit">
+            <Button type="submit">
                 Guardar
             </Button>
-            <Button className={styles.botao} type="submit">
+            <Button type="submit">
                 Limpar
             </Button>
         </>
