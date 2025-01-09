@@ -113,18 +113,49 @@ export default function FormularioCard() {
         <> 
         <Formulario onSubmit={handleSubmit}>
             <Label className="titulo">Título</Label>
-            <CampoTexto type="text" id="titulo" name="title" placeholder='Digite o título do vídeo' required />
+            <CampoTexto type="text" 
+            id="titulo" name="title" 
+            value={title}  
+            placeholder='Digite o título do vídeo'  
+            onChange={(e) => setTitle(e.target.value)} 
+            required />
 
-            <ListaSuspensa type="text" id="categoria" name="section" required />
+            <ListaSuspensa 
+            type="text"
+            id="categoria" 
+            value={section} 
+            name="section" 
+            onChange={(e) => setSection(e.target.value)} 
+            required />
 
             <Label className="imagem">Imagem</Label>
-            <CampoTexto type="url" id="imagem" name="thumbnail" placeholder='Digite o link da imagem' required />
+            <CampoTexto 
+            type="url" 
+            id="imagem" 
+            name="thumbnail" 
+            value={thumbnail} 
+            placeholder='Digite o link da imagem' 
+            onChange={(e) => setThumbnail(e.target.value)} 
+            required />
 
             <Label className="video">Vídeo</Label>
-            <CampoTexto type="url" id="url" name="url" placeholder='Digite o link do vídeo' required />
+            <CampoTexto 
+            type="url" 
+            id="url" 
+            name="url" 
+            value={url} 
+            placeholder='Digite o link do vídeo' 
+            onChange={(e) => setUrl(e.target.value)} 
+            required />
 
             <Label className="descricao">Descrição</Label>
-            <AreaDeTexto id="descricao" name="descricao" placeholder='Sobre o quê é esse vídeo?' required />
+            <AreaDeTexto 
+            id="descricao" 
+            name="descricao" 
+            value={descricao} 
+            placeholder='Sobre o quê é esse vídeo?' 
+            onChange={(e) => setDescricao(e.target.value)} 
+            required />
 
             <ConteinerBotao>
                 <Botao type="submit" aria-label="Guardar informações">
