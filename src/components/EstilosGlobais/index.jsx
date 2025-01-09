@@ -7,19 +7,24 @@ const EstilosGlobais = createGlobalStyle`
   --cor-terciaria: #000000;
   --cor-quartenaria: #1d1d1d;
   --cor-borda-card: #6BD1FF;
+  --cor-fonte-1: #F5F5F5;
+  -cor-fonte-2: #757575;
   --cor-card-front-end: lightblue;
   --cor-card-back-end: lightgreen;
   -cor-card-mobile: yellow;
+  --fonte-principal: 'Roboto', sans-serif;
 
 }
 
 html {
   line-height: 1.15; 
   -webkit-text-size-adjust: 100%; 
+  font-family: var(--fonte-principal);
 }
 body {
   margin: 0;
   min-height: 100vh;
+  color: var(--cor-fonte-1);
 }
 main {
   display: block;
@@ -35,6 +40,7 @@ hr {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: none; 

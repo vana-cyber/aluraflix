@@ -9,6 +9,7 @@ const Button = styled.button`
     padding: 0.8rem;
     text-transform: uppercase;
     width: 10rem;
+    font-weight: bold;
 
     &:hover {
         border-color: var(--cor-secundaria);
@@ -16,14 +17,11 @@ const Button = styled.button`
     }
 `
 
-export default function Botao() {
+export default function Botao({ tipo, descricao, texto}) {
     return (
         <>
-            <Button type="submit">
-                Guardar
-            </Button>
-            <Button type="submit">
-                Limpar
+            <Button type={tipo} aria-label={descricao}>
+                {texto}
             </Button>
         </>
     )
