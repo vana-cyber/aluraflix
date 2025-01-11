@@ -11,7 +11,8 @@ export default defineConfig({
       "MenuLink": "/src/components/MenuLink",
       "paginas": "/src/paginas",
       "NovoVideo": "/src/paginas/NovoVideo",
-      "Logo": "/src/assets/logo.png"
+      "Logo": "/src/assets/logo.png",
+      "handleSubmit": "components/Videos/AdicionarVideos"
       }
     }
   })

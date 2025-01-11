@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import { useState } from 'react';
 import ListaSuspensa from 'components/ListaSuspensa';
+import { handleSubmit } from 'components/Videos/AdicionarVideos';
 
 const Formulario = styled.form`
     display: flex;
@@ -64,23 +65,6 @@ const AreaDeTexto = styled.textarea`
 `
 
 export default function FormularioCard() {
-
-    const [videos, setVideos] = useState([]);
-
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevenir o reload da página
-        event.target.closest('form').reset();
-
-        const novoVideo = {
-            title: event.target.title.value,
-            url: event.target.url.value,
-            thumbnail: event.target.thumbnail.value,
-            descricao: event.target.descricao.value,
-        };
-
-        setVideos([...videos, novoVideo]); // Adicionar novo vídeo ao estado
-        event.target.reset(); // Limpar o formulário
-    };
 
     const [title, setTitle] = useState('');
     const [section, setSection] = useState('');
@@ -147,7 +131,7 @@ export default function FormularioCard() {
                     required />
 
                 <ConteinerBotao>
-                    <Botao type="submit" aria-label="Guardar informações" onClick={(event) => handleSubmit(event)}>
+                    <Botao type="submit" aria-label="Guardar informações">
                         Guardar
                     </Botao>
                     <Botao type="button" aria-label="Limpar formulário" onClick={(event) => handleClear(event)}>
@@ -156,17 +140,6 @@ export default function FormularioCard() {
                 </ConteinerBotao>
 
             </Formulario>
-
-            <div>
-                {videos.map((video, index) => (
-                    <div key={index}>
-                        <h3>{video.titulo}</h3>
-                        <img src={video.imagem} alt={video.titulo} />
-                        <p>{video.descricao}</p>
-                        <a href={video.url}>Assistir Vídeo</a>
-                    </div>
-                ))}
-            </div>
         </>
     )
 }
