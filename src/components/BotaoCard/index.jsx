@@ -12,6 +12,10 @@ const BotaoConteiner = styled.div`
     gap: 5rem;
     justify-content: center;
     align-items: flex-end;
+    background-color: #000000;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
 `
 
 export default function BotaoCard () {

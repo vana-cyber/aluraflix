@@ -21,8 +21,10 @@ html {
   -webkit-text-size-adjust: 100%; 
   font-family: var(--fonte-principal);
 }
+
 body {
   margin: 0;
+  width: 100%;
   min-height: 100vh;
   color: var(--cor-fonte-1);
 }

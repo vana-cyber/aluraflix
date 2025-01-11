@@ -8,7 +8,7 @@ const Formulario = styled.form`
     gap: 1.5rem;
     max-width: 40rem;
     padding: 1.5rem;
-    width: 100vh;
+    width: 100%;
 `
 
 const Label = styled.label`
@@ -24,6 +24,7 @@ const ConteinerBotao = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    padding: 1rem;
 `
 
 const Botao = styled.button`
@@ -62,30 +63,18 @@ const AreaDeTexto = styled.textarea`
     text-align: flex-start;
 `
 
-const ListaDeVideos = styled.div`
-    margin-top: 2rem;
-`;
-
-const VideoCard = styled.div`
-    background: var(--dark-gray);
-    border: 1px solid var(--cor-primaria);
-    border-radius: 0.7rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-`;
-
 export default function FormularioCard() {
 
     const [videos, setVideos] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevenir o reload da página
-         event.target.closest('form').reset();
+        event.target.closest('form').reset();
 
         const novoVideo = {
-            titulo: event.target.title.value,
+            title: event.target.title.value,
             url: event.target.url.value,
-            imagem: event.target.thumbnail.value,
+            thumbnail: event.target.thumbnail.value,
             descricao: event.target.descricao.value,
         };
 
@@ -110,80 +99,74 @@ export default function FormularioCard() {
     };
 
     return (
-        <> 
-        <Formulario onSubmit={handleSubmit}>
-            <Label className="titulo">Título</Label>
-            <CampoTexto type="text" 
-            id="titulo" name="title" 
-            value={title}  
-            placeholder='Digite o título do vídeo'  
-            onChange={(e) => setTitle(e.target.value)} 
-            required />
+        <>
+            <Formulario onSubmit={handleSubmit}>
+                <Label className="titulo">Título</Label>
+                <CampoTexto type="text"
+                    id="titulo" name="title"
+                    value={title}
+                    placeholder='Digite o título do vídeo'
+                    onChange={(e) => setTitle(e.target.value)}
+                    required />
 
-            <ListaSuspensa 
-            type="text"
-            id="categoria" 
-            value={section} 
-            name="section" 
-            onChange={(e) => setSection(e.target.value)} 
-            required />
+                <ListaSuspensa
+                    type="text"
+                    id="categoria"
+                    value={section}
+                    name="section"
+                    onChange={(e) => setSection(e.target.value)}
+                    required />
 
-            <Label className="imagem">Imagem</Label>
-            <CampoTexto 
-            type="url" 
-            id="imagem" 
-            name="thumbnail" 
-            value={thumbnail} 
-            placeholder='Digite o link da imagem' 
-            onChange={(e) => setThumbnail(e.target.value)} 
-            required />
+                <Label className="imagem">Imagem</Label>
+                <CampoTexto
+                    type="url"
+                    id="imagem"
+                    name="thumbnail"
+                    value={thumbnail}
+                    placeholder='Digite o link da imagem'
+                    onChange={(e) => setThumbnail(e.target.value)}
+                    required />
 
-            <Label className="video">Vídeo</Label>
-            <CampoTexto 
-            type="url" 
-            id="url" 
-            name="url" 
-            value={url} 
-            placeholder='Digite o link do vídeo' 
-            onChange={(e) => setUrl(e.target.value)} 
-            required />
+                <Label className="video">Vídeo</Label>
+                <CampoTexto
+                    type="url"
+                    id="url"
+                    name="url"
+                    value={url}
+                    placeholder='Digite o link do vídeo'
+                    onChange={(e) => setUrl(e.target.value)}
+                    required />
 
-            <Label className="descricao">Descrição</Label>
-            <AreaDeTexto 
-            id="descricao" 
-            name="descricao" 
-            value={descricao} 
-            placeholder='Sobre o quê é esse vídeo?' 
-            onChange={(e) => setDescricao(e.target.value)} 
-            required />
+                <Label className="descricao">Descrição</Label>
+                <AreaDeTexto
+                    id="descricao"
+                    name="descricao"
+                    value={descricao}
+                    placeholder='Sobre o quê é esse vídeo?'
+                    onChange={(e) => setDescricao(e.target.value)}
+                    required />
 
-            <ConteinerBotao>
-                <Botao type="submit" aria-label="Guardar informações">
-                    Guardar
-                </Botao>
-                <Botao  type="button" aria-label="Limpar formulário" onClick={(event) => handleClear(event)}>
-                    Limpar
-                </Botao>
-            </ConteinerBotao>
+                <ConteinerBotao>
+                    <Botao type="submit" aria-label="Guardar informações" onClick={(event) => handleSubmit(event)}>
+                        Guardar
+                    </Botao>
+                    <Botao type="button" aria-label="Limpar formulário" onClick={(event) => handleClear(event)}>
+                        Limpar
+                    </Botao>
+                </ConteinerBotao>
 
-        </Formulario>
+            </Formulario>
 
-         <ListaDeVideos>
-         {videos.map((video, index) => (
-             <VideoCard key={index}>
-                 <h3>{video.titulo}</h3>
-                 <img
-                     src={video.imagem}
-                     alt={`Thumbnail de ${video.titulo}`}
-                     style={{ maxWidth: '100%', borderRadius: '0.5rem' }}
-                 />
-                 <p>{video.descricao}</p>
-                 <a href={video.url} target="_blank" rel="">
-                     Assistir ao vídeo
-                 </a>
-             </VideoCard>
-         ))}
-     </ListaDeVideos>
+            <div>
+                {videos.map((video, index) => (
+                    <div key={index}>
+                        <h3>{video.titulo}</h3>
+                        <img src={video.imagem} alt={video.titulo} />
+                        <p>{video.descricao}</p>
+                        <a href={video.url}>Assistir Vídeo</a>
+                    </div>
+                ))}
+            </div>
         </>
     )
 }
