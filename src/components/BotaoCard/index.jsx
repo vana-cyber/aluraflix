@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { PiPencilSimpleLineBold } from "react-icons/pi";
+
+
 
 const Botao = styled.button`
+    display: flex;
+    gap: 1rem;
     background-color: transparent;
     border-color: transparent;
     color: var(--cor-fonte-1);
     font-weight: bold;
+    text-align: center;
+    justify-content: center;
 `
 
 const BotaoConteiner = styled.div`
@@ -18,15 +26,17 @@ const BotaoConteiner = styled.div`
     border-radius: 0.5rem;
 `
 
-export default function BotaoCard () {
+export default function BotaoCard() {
     return (
         <BotaoConteiner>
-        <Botao>
-            DELETAR
-        </Botao>
-        <Botao>
-            EDITAR
-        </Botao>
+            <Botao>
+                <FaRegTrashAlt />
+                DELETAR
+            </Botao>
+            <Botao>
+                <PiPencilSimpleLineBold size={20} />
+                EDITAR
+            </Botao>
         </BotaoConteiner>
     )
 }
