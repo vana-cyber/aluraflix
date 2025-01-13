@@ -27,7 +27,7 @@ const CardVideo = styled.figure`
     text-align: center;
     img {
         width: 100%;
-        height: 260px;
+        height: 15rem;
         border-radius: 4px;
     }
 `;

@@ -12,7 +12,7 @@ const Conteiner = styled.div`
      box-shadow: ${(props) =>
     props.$ativo ? "inset 0 0 5px #2271D1" : ""}; /* Lógica para a sombra */
      padding: 1rem;
-     width: 8rem;
+     width: 9rem;
      border: 2.5px solid;
      border-radius: 0.5rem;
      text-align: center;
