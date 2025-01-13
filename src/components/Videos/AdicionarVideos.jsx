@@ -1,10 +1,5 @@
-import { styled } from 'styled-components';
 import { useState } from 'react';
 import Videos from '.';
-
-const ListaDeVideos = styled.div`
-    margin-top: 2rem;
-`;
 
 
 
@@ -17,6 +12,7 @@ export const handleSubmit = (event) => {
     const novoVideo = {
         title: event.target.title.value,
         url: event.target.url.value,
+        section: event.target.section.value,
         thumbnail: event.target.thumbnail.value,
         descricao: event.target.descricao.value,
     };
@@ -26,13 +22,13 @@ export const handleSubmit = (event) => {
 
     return (
             
-            <ListaDeVideos>
-                {videos.map((video, id) => (
-                    <Videos key={id}>
+            <>
+                {videos.map((video) => (
+                    <Videos key={video.id}>
                         <p>{video.descricao}</p>
                     </Videos>
                 ))}
-            </ListaDeVideos>
+            </>
         
     )
 }
