@@ -23,7 +23,7 @@ const CardVideo = styled.figure`
     padding: 1rem;
     border: 3px solid;
     border-color: var(--cor-${props => props.section});
-    border-radius: 8px;
+    border-radius: 15px;
     text-align: center;
     img {
         width: 100%;
