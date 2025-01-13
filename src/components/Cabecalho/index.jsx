@@ -6,7 +6,7 @@ const Header = styled.header`
     display: flex;
     justify-content: space-around;
     background-color: var(--cor-primaria);
-    align-items: flex-start;
+    align-items: center;
     padding: 3rem;;
     width: 100vw;
 

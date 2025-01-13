@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import videos from "./videos.json";
 import BotaoCard from "components/BotaoCard";
+import EstilosGlobais from "components/EstilosGlobais";
 
 const ListaSeções = styled.div`
     display: flex;
@@ -17,24 +18,25 @@ const ListaVideos = styled.ul`
 `;
 
 const CardVideo = styled.figure`
-    max-width: 432px;
-    min-height: 319.92px;
+    width: 432px;
+    min-height: 400px;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 3px solid;
+    border-color: var(--cor-${props => props.section});
     border-radius: 8px;
     text-align: center;
     img {
         width: 100%;
-        height: auto;
+        height: 260px;
         border-radius: 4px;
     }
 `;
 
 const DivEstilizada = styled.div`
     padding: 1rem;
-    width: 300px;
+    width: 432px;
     border-radius: 1.5rem;
-    background-color: white;
+    background-color: var(--cor-${props => props.section});
     text-align: center;
     margin-left: 2rem;
     margin-top: 2rem;
@@ -43,6 +45,7 @@ const DivEstilizada = styled.div`
 
 const Titulo = styled.h2`
     margin-left: 0.8rem;
+    font-weight: bold;
 `
 
 export default function Videos() {
@@ -50,13 +53,14 @@ export default function Videos() {
         <ListaSeções>
             {videos.map((section) => (
                 <section key={section.section}>
-                    <DivEstilizada>
-                        <Titulo>{section.section}</Titulo>
-                    </DivEstilizada>
+                    <EstilosGlobais />
+                        <DivEstilizada key={section.id} section={section.section.toLowerCase().replace(' ', '-')}>
+                            <Titulo>{section.section}</Titulo>
+                        </DivEstilizada>
                     <ListaVideos>
                         {section.videos.map((video) => (
                             <li key={video.id}>
-                                <CardVideo>
+                                <CardVideo section={section.section.toLowerCase().replace(' ', '-')}>
                                     <a href={video.url} target="_blank" rel="noopener noreferrer">
                                         <img src={video.thumbnail} alt={video.title} />
                                     </a>
