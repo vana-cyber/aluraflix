@@ -47,7 +47,7 @@ const Botao = styled.button`
 const CampoTexto = styled.input`
     background-color: transparent;
     border-color: var(--cor-primaria);
-    text-align: flex-start;
+    text-align: start;
     padding: 1rem;
     border-radius: 0.7rem;
     width: 30rem;
@@ -60,7 +60,7 @@ const AreaDeTexto = styled.textarea`
     border-radius: 0.7rem;
     border-color: var(--cor-primaria);
     padding-left: 1.5rem;
-    text-align: flex-start;
+    text-align: start;
 `
 
 export default function FormularioCard() {
@@ -72,9 +72,9 @@ export default function FormularioCard() {
     const [url, setUrl] = useState('');
     const [descricao, setDescricao] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         const novoVideo = {
             id: Date.now(), 
             title,
@@ -83,14 +83,29 @@ export default function FormularioCard() {
             url,
             descricao,
         };
-
-        setVideos((prevVideos) => [...prevVideos, novoVideo]);
-
-        setTitle('');
-        setSection('');
-        setThumbnail('');
-        setUrl('');
-        setDescricao('');
+    
+        try {
+            // Enviar o novo vídeo para a API
+            await fetch('/api/videos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(novoVideo),
+            });
+    
+            // Atualizar o estado local
+            setVideos((prevVideos) => [...prevVideos, novoVideo]);
+    
+            // Limpar os campos do formulário
+            setTitle('');
+            setSection('');
+            setThumbnail('');
+            setUrl('');
+            setDescricao('');
+        } catch (error) {
+            console.error('Erro ao adicionar vídeo:', error);
+        }
     };
 
     const handleClear = (event) => {
@@ -161,6 +176,7 @@ export default function FormularioCard() {
                 </ConteinerBotao>
 
             </Formulario>
+
         </>
     )
 }

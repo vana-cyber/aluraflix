@@ -1,71 +1,73 @@
-[
-  {
-    "section": "FRONT-END",
-    "videos": [
-      {
-        "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-        "id": "ZY3-MFxVdEw",
-        "url": "https://www.youtube.com/embed/ZY3-MFxVdEw",
-        "thumbnail": "https://img.youtube.com/vi/ZY3-MFxVdEw/maxresdefault.jpg"
-      },
-      {
-        "title": "Como fazer SEO com React, NextJS e Deploy estático feat. Dicas de Performance | Pokedex #DevSoutinho",
-        "id": "c8mVlakBESE",
-        "url": "https://www.youtube.com/embed/c8mVlakBESE",
-        "thumbnail": "https://img.youtube.com/vi/c8mVlakBESE/maxresdefault.jpg"
-      },
-      {
-        "title": "Guia de carreira React JS | #HipstersPontoTube",
-        "id": "0tS4lUq_7iA",
-        "url": "https://www.youtube.com/embed/0tS4lUq_7iA",
-        "thumbnail": "https://img.youtube.com/vi/0tS4lUq_7iA/maxresdefault.jpg"
-      }
-    ]
-  },
-  {
-    "section": "BACK-END",
-    "videos": [
-      {
-        "title": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei | #HipstersPontoTube",
-        "id": "fiPfvylj6rk",
-        "url": "https://www.youtube.com/embed/fiPfvylj6rk",
-        "thumbnail": "https://img.youtube.com/vi/fiPfvylj6rk/maxresdefault.jpg"
-      },
-      {
-        "title": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-        "id": "6o6-bKOZOEY",
-        "url": "https://www.youtube.com/embed/6o6-bKOZOEY",
-        "thumbnail": "https://img.youtube.com/vi/6o6-bKOZOEY/maxresdefault.jpg"
-      },
-      {
-        "title": "A MELHOR linguagem de programação com Fabio Akita | #HipstersPontoTube",
-        "id": "imB0QVoNrGc",
-        "url": "https://www.youtube.com/embed/imB0QVoNrGc",
-        "thumbnail": "https://img.youtube.com/vi/imB0QVoNrGc/maxresdefault.jpg"
-      }
-    ]
-  },
-  {
-    "section": "MOBILE",
-    "videos": [
-      {
-        "title": "Desenvolvimento Android #HipstersPontoTube",
-        "id": "fWscDFHKgw8",
-        "url": "https://www.youtube.com/embed/fWscDFHKgw8",
-        "thumbnail": "https://img.youtube.com/vi/fWscDFHKgw8/maxresdefault.jpg"
-      },
-      {
-        "title": "React Native EU 2019: Emily Janzer - The New React Native",
-        "id": "52El0EUI6D0",
-        "url": "https://www.youtube.com/embed/52El0EUI6D0",
-        "thumbnail": "https://img.youtube.com/vi/52El0EUI6D0/maxresdefault.jpg"
-      },
-      {
-        "title": "Web x Mobile o que muda na hora de PROGRAMAR entre as plataformas?",
-        "id": "t51Vvl8Tp1Q",
-        "url": "https://www.youtube.com/embed/t51Vvl8Tp1Q",
-        "thumbnail": "https://img.youtube.com/vi/t51Vvl8Tp1Q/maxresdefault.jpg"
-      }
-    ]
-  }
-]
+{
+  "sections": [
+    {
+      "section": "FRONT-END",
+      "videos": [
+        {
+          "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+          "id": "ZY3-MFxVdEw",
+          "url": "https://www.youtube.com/embed/ZY3-MFxVdEw",
+          "thumbnail": "https://img.youtube.com/vi/ZY3-MFxVdEw/maxresdefault.jpg"
+        },
+        {
+          "title": "Como fazer SEO com React, NextJS e Deploy estático feat. Dicas de Performance | Pokedex #DevSoutinho",
+          "id": "c8mVlakBESE",
+          "url": "https://www.youtube.com/embed/c8mVlakBESE",
+          "thumbnail": "https://img.youtube.com/vi/c8mVlakBESE/maxresdefault.jpg"
+        },
+        {
+          "title": "Guia de carreira React JS | #HipstersPontoTube",
+          "id": "0tS4lUq_7iA",
+          "url": "https://www.youtube.com/embed/0tS4lUq_7iA",
+          "thumbnail": "https://img.youtube.com/vi/0tS4lUq_7iA/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "section": "BACK-END",
+      "videos": [
+        {
+          "title": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei | #HipstersPontoTube",
+          "id": "fiPfvylj6rk",
+          "url": "https://www.youtube.com/embed/fiPfvylj6rk",
+          "thumbnail": "https://img.youtube.com/vi/fiPfvylj6rk/maxresdefault.jpg"
+        },
+        {
+          "title": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
+          "id": "6o6-bKOZOEY",
+          "url": "https://www.youtube.com/embed/6o6-bKOZOEY",
+          "thumbnail": "https://img.youtube.com/vi/6o6-bKOZOEY/maxresdefault.jpg"
+        },
+        {
+          "title": "A MELHOR linguagem de programação com Fabio Akita | #HipstersPontoTube",
+          "id": "imB0QVoNrGc",
+          "url": "https://www.youtube.com/embed/imB0QVoNrGc",
+          "thumbnail": "https://img.youtube.com/vi/imB0QVoNrGc/maxresdefault.jpg"
+        }
+      ]
+    },
+    {
+      "section": "MOBILE",
+      "videos": [
+        {
+          "title": "Desenvolvimento Android #HipstersPontoTube",
+          "id": "fWscDFHKgw8",
+          "url": "https://www.youtube.com/embed/fWscDFHKgw8",
+          "thumbnail": "https://img.youtube.com/vi/fWscDFHKgw8/maxresdefault.jpg"
+        },
+        {
+          "title": "React Native EU 2019: Emily Janzer - The New React Native",
+          "id": "52El0EUI6D0",
+          "url": "https://www.youtube.com/embed/52El0EUI6D0",
+          "thumbnail": "https://img.youtube.com/vi/52El0EUI6D0/maxresdefault.jpg"
+        },
+        {
+          "title": "Web x Mobile o que muda na hora de PROGRAMAR entre as plataformas?",
+          "id": "t51Vvl8Tp1Q",
+          "url": "https://www.youtube.com/embed/t51Vvl8Tp1Q",
+          "thumbnail": "https://img.youtube.com/vi/t51Vvl8Tp1Q/maxresdefault.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -17,11 +17,12 @@ const EstilosGlobais = createGlobalStyle`
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 html {
-  line-height: 1.15; 
+  line-height: 1.15;
+  padding: 0; 
   -webkit-text-size-adjust: 100%; 
   font-family: var(--fonte-principal);
 }
