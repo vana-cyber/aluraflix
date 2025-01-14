@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { PiPencilSimpleLineBold } from "react-icons/pi";
+import ModalEditarCard from "components/ModalEditarCard";
 
 
 
@@ -33,7 +34,7 @@ export default function BotaoCard() {
                 <FaRegTrashAlt />
                 DELETAR
             </Botao>
-            <Botao>
+            <Botao onClick={() => <ModalEditarCard />}>
                 <PiPencilSimpleLineBold size={20} />
                 EDITAR
             </Botao>

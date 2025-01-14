@@ -1,7 +1,6 @@
 import { styled } from 'styled-components';
 import { useState } from 'react';
 import ListaSuspensa from 'components/ListaSuspensa';
-import { handleSubmit } from 'components/Videos/AdicionarVideos';
 
 const Formulario = styled.form`
     display: flex;
@@ -66,11 +65,33 @@ const AreaDeTexto = styled.textarea`
 
 export default function FormularioCard() {
 
+    const [videos, setVideos] = useState([]);
     const [title, setTitle] = useState('');
     const [section, setSection] = useState('');
     const [thumbnail, setThumbnail] = useState('');
     const [url, setUrl] = useState('');
     const [descricao, setDescricao] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const novoVideo = {
+            id: Date.now(), 
+            title,
+            section,
+            thumbnail,
+            url,
+            descricao,
+        };
+
+        setVideos((prevVideos) => [...prevVideos, novoVideo]);
+
+        setTitle('');
+        setSection('');
+        setThumbnail('');
+        setUrl('');
+        setDescricao('');
+    };
 
     const handleClear = (event) => {
         event.preventDefault();

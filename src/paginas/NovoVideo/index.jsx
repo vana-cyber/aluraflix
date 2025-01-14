@@ -1,6 +1,7 @@
 
 import styled from 'styled-components';
 import FormularioCard from '../../components/FormularioCard';
+import { useState } from 'react';
 
 const ConteinerNovoVideo = styled.div`
     display: flex;
@@ -24,12 +25,18 @@ const Paragrafo = styled.p`
 `
 
 export default function NovoVideo() {
+    const [novoVideo, setNovoVideo] = useState([]);
+
+    const aoNovoVideoAdicionado = () => {
+        return console.log("Video adicionado");
+    }
+
     return (
         <>
             <ConteinerNovoVideo>
                 <Titulo>NOVO VÍDEO</Titulo>
                 <Paragrafo>Complete o formulário para criar um novo card de vídeo.</Paragrafo>
-                <FormularioCard />
+                <FormularioCard aoVideoCadastrado={novoVideo => aoNovoVideoAdicionado(novoVideo)}/>
             </ConteinerNovoVideo>
         </>
     )
