@@ -50,7 +50,7 @@ const Titulo = styled.h2`
     font-weight: bold;
 `
 
-export default function Videos() {
+export default function Videos({ videos, section }) {
     const [videos, setVideos] = useState([]);
 
     useEffect(() => {
@@ -58,7 +58,6 @@ export default function Videos() {
             try {
                 const response = await axios.get('http://localhost:3000/sections');
                 console.log(response.data);
-                console.log(section);
                 setVideos(response.data);
             } catch (error) {
             console.error("Erro ao buscar vídeos:", error);

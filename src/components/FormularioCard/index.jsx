@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import { useState } from 'react';
 import ListaSuspensa from 'components/ListaSuspensa';
+import Videos from 'components/Videos';
 
 const Formulario = styled.form`
     display: flex;
@@ -86,7 +87,7 @@ export default function FormularioCard() {
     
         try {
             // Enviar o novo vídeo para a API
-            await fetch('/api/videos', {
+            await fetch('http://localhost:3000/sections', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -130,7 +131,6 @@ export default function FormularioCard() {
                     required />
 
                 <ListaSuspensa
-                    type="text"
                     id="categoria"
                     value={section}
                     name="section"
@@ -176,6 +176,8 @@ export default function FormularioCard() {
                 </ConteinerBotao>
 
             </Formulario>
+
+            <Videos videos={videos} section={section} />
 
         </>
     )
