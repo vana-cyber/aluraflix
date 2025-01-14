@@ -59,8 +59,7 @@ export default function Videos() {
                 const response = await axios.get('http://localhost:3000/sections');
                 console.log(response.data);
                 console.log(section);
-                const todosOsVideos = response.data.flatMap(section => section.videos);
-                setVideos(todosOsVideos);
+                setVideos(response.data);
             } catch (error) {
             console.error("Erro ao buscar vídeos:", error);
             }
