@@ -1,4 +1,6 @@
 import { styled } from 'styled-components';
+import { useContext } from 'react';
+import { VideoContext } from '@/context/VideoContext'; 
 import { useState } from 'react';
 import ListaSuspensa from 'components/ListaSuspensa';
 import Videos from 'components/Videos';
@@ -62,53 +64,83 @@ const AreaDeTexto = styled.textarea`
     border-color: var(--cor-primaria);
     padding-left: 1.5rem;
     text-align: start;
-`
+    `
 
 export default function FormularioCard() {
-
-    const [videos, setVideos] = useState([]);
+    
+    const { listaVideos, setListaVideos } = useContext(VideoContext);
     const [title, setTitle] = useState('');
     const [section, setSection] = useState('');
     const [thumbnail, setThumbnail] = useState('');
     const [url, setUrl] = useState('');
     const [descricao, setDescricao] = useState('');
-
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
+        
         const novoVideo = {
-            id: Date.now(), 
             title,
-            section,
-            thumbnail,
+            id: Date.now(), 
             url,
+            thumbnail,
             descricao,
         };
-    
+        
         try {
-            // Enviar o novo vídeo para a API
-            await fetch('http://localhost:3000/sections', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(novoVideo),
-            });
+            // buscando a api
+            const response = await fetch(`http://localhost:3000/sections`);
+            const sections = await response.json();
     
-            // Atualizar o estado local
-            setVideos((prevVideos) => [...prevVideos, novoVideo]);
+            // encontrando a seção
+            const sectionToUpdate = sections.find(sec => sec.section === section);
     
-            // Limpar os campos do formulário
-            setTitle('');
-            setSection('');
-            setThumbnail('');
-            setUrl('');
-            setDescricao('');
+            console.log('Seção encontrada:', sectionToUpdate); // Debugging
+    
+            if (sectionToUpdate) {
+                // adicionando novo vídeo à seção existente
+                sectionToUpdate.videos.push(novoVideo);
+    
+                console.log('Seção atualizada:', sectionToUpdate); // Debugging
+                
+                // enviando a seção atualizada de volta para a API
+                const updateResponse = await fetch(`http://localhost:3000/sections/${sectionToUpdate.id}`, {
+                    method: 'PUT', 
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(sectionToUpdate),
+                });
+    
+                if (!updateResponse.ok) {
+                    throw new Error(`Erro ao atualizar seção: ${updateResponse.status}`);
+                }
+                
+                // atualizando o estado local
+                setListaVideos((prevSections) => {
+                    return prevSections.map((sec) => {
+                        if (sec.section === section) {
+                            return {
+                                ...sec,
+                                videos: [...sec.videos, novoVideo], // adicionando novo vídeo a seção existente
+                            };
+                        }
+                        return sec;
+                    })
+                });
+    
+                setTitle('');
+                setSection('');
+                setThumbnail('');
+                setUrl('');
+                setDescricao('');
+            } else {
+                console.error('Seção não encontrada');
+            }
         } catch (error) {
             console.error('Erro ao adicionar vídeo:', error);
         }
     };
-
+    
     const handleClear = (event) => {
         event.preventDefault();
         // Limpa os valores dos campos
@@ -132,8 +164,8 @@ export default function FormularioCard() {
 
                 <ListaSuspensa
                     id="categoria"
-                    value={section}
                     name="section"
+                    value={section}
                     onChange={(e) => setSection(e.target.value)}
                     required />
 
@@ -177,7 +209,7 @@ export default function FormularioCard() {
 
             </Formulario>
 
-            <Videos videos={videos} section={section} />
+            <Videos listaVideos={listaVideos} />
 
         </>
     )

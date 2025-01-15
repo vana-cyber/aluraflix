@@ -13,24 +13,16 @@ const Option = styled.option`
 `
 
 
-export default function ListaSuspensa() {
+export default function ListaSuspensa({ value, onChange }) {
     return (
         <>
             <label>Selecione uma categoria</label>
-            <Select>
-                <Option>
-
-                </Option>
-                <Option>
-                    Front-end
-                </Option>
-                <Option>
-                    Back-end
-                </Option>
-                <Option>
-                    Mobile
-                </Option>
+            <Select value={value} onChange={onChange}>
+                <Option value=""></Option>
+                <Option value="FRONT-END">Front-end</Option>
+                <Option value="BACK-END">Back-end</Option>
+                <Option value="MOBILE">Mobile</Option>
             </Select>
         </>
-    )
+    );
 }

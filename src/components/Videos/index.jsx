@@ -1,24 +1,26 @@
 import styled from "styled-components";
-import videos from "./videos.json";
+import { useContext } from "react";
+import { VideoContext } from '@/context/VideoContext';  
+// import videos from "./videos.json";
 import BotaoCard from "components/BotaoCard";
-import EstilosGlobais from "components/EstilosGlobais";
-import axios from "axios";
-import React, { useEffect, useState } from 'react';
+// import EstilosGlobais from "components/EstilosGlobais";
+// import axios from "axios";
+// import React, { useEffect, useState } from 'react';
 
 const ListaSeções = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     gap: 2rem;
     width: 100%;
     `;
 
-const ListaVideos = styled.ul`
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    list-style: none;
-    width: 100%;
-    `;
+// const ListaVideos = styled.ul`
+//     display: flex;
+//     flex-direction: row;
+//     gap: 0.5rem;
+//     list-style: none;
+//     width: 100%;
+//     `;
 
 const CardVideo = styled.figure`
     width: 350px;
@@ -34,68 +36,46 @@ const CardVideo = styled.figure`
     }
 `;
 
-const DivEstilizada = styled.div`
-    padding: 1rem;
-    width: 350px;
-    border-radius: 1.5rem;
-    background-color: var(--cor-${props => props.section});
-    text-align: center;
-    margin-left: 5rem;
-    margin-top: 2rem;
-    justify-content: center;
-`
+// const DivEstilizada = styled.div`
+//     padding: 1rem;
+//     width: 350px;
+//     border-radius: 1.5rem;
+//     background-color: var(--cor-${props => props.section});
+//     text-align: center;
+//     margin-left: 5rem;
+//     margin-top: 2rem;
+//     justify-content: center;
+// `
 
-const Titulo = styled.h2`
-    margin-left: 0.8rem;
-    font-weight: bold;
-`
+// const Titulo = styled.h2`
+//     margin-left: 0.8rem;
+//     font-weight: bold;
+// `
 
-export default function Videos({ videos, section }) {
-    const [videos, setVideos] = useState([]);
+export default function Videos() {
 
-    useEffect(() => {
-        const fetchVideos = async () => {
-            try {
-                const response = await axios.get('http://localhost:3000/sections');
-                console.log(response.data);
-                setVideos(response.data);
-            } catch (error) {
-            console.error("Erro ao buscar vídeos:", error);
-            }
-        };
+    const { listaVideos } = useContext(VideoContext);
 
-        fetchVideos();
-    }, []);
-
+    
+    if (!listaVideos || !Array.isArray(listaVideos)) {
+        return <p>Nenhum vídeo disponível.</p>; // ou qualquer mensagem que você queira exibir
+    }
     return (
         <ListaSeções>
-            {videos.length > 0 ? (
-                videos.map((section) => (
-                    <div key={section.section}>
-                        <EstilosGlobais />
-                        <DivEstilizada>
-                            <Titulo>{section.section}</Titulo>
-                        </DivEstilizada>
-                        <ListaVideos>
-                            {section && section.videos && section.videos.map((video) => (
-                                <li key={video.id}>
-                                    <CardVideo>
-                                        <a href={video.url} target="_blank" rel="noopener noreferrer">
-                                            <img src={video.thumbnail} alt={video.title} />
-                                        </a>
-                                        <figcaption>
-                                            <h3>{video.title}</h3>
-                                            <BotaoCard />
-                                        </figcaption>
-                                    </CardVideo>
-                                </li>
-                            ))}
-                        </ListaVideos>
-                    </div>
+            {listaVideos.map((video) => (
+                    <li key={video.id}>
+                        <CardVideo>
+                            <a href={video.url}>
+                                <img src={video.thumbnail} alt={video.title} />
+                            </a>
+                            <figcaption>
+                                <h3>{video.title}</h3>
+                                <BotaoCard />
+                            </figcaption>
+                        </CardVideo>
+                    </li>
                 ))
-            ) : (
-                <p>Carregando vídeos...</p>
-            )}
-        </ListaSeções>
+            
+            } </ListaSeções>
     );
 }

@@ -12,7 +12,9 @@ export default defineConfig({
       "paginas": "/src/paginas",
       "NovoVideo": "/src/paginas/NovoVideo",
       "Logo": "/src/assets/logo.png",
-      "handleSubmit": "components/Videos/AdicionarVideos"
+      "handleSubmit": "components/Videos/AdicionarVideos",
+      "context": "/src/context",
+      "VideoContext": "/src/context/VideoContext",
       }
     }
   })
