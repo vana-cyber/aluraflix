@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import { VideoContext } from '@/context/VideoContext'; 
 import { useState } from 'react';
 import ListaSuspensa from 'components/ListaSuspensa';
-import Videos from 'components/Videos';
 
 const Formulario = styled.form`
     display: flex;
@@ -68,7 +67,7 @@ const AreaDeTexto = styled.textarea`
 
 export default function FormularioCard() {
     
-    const { listaVideos, setListaVideos } = useContext(VideoContext);
+    const { setListaVideos } = useContext(VideoContext);
     const [title, setTitle] = useState('');
     const [section, setSection] = useState('');
     const [thumbnail, setThumbnail] = useState('');
@@ -208,8 +207,6 @@ export default function FormularioCard() {
                 </ConteinerBotao>
 
             </Formulario>
-
-            <Videos listaVideos={listaVideos} />
 
         </>
     )
