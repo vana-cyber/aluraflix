@@ -58,24 +58,30 @@ export default function Videos() {
 
     
     if (!listaVideos || !Array.isArray(listaVideos)) {
-        return <p>Nenhum vídeo disponível.</p>; // ou qualquer mensagem que você queira exibir
+        return <p>Nenhum vídeo disponível.</p>;
     }
     return (
-        <ListaSeções>
-            {listaVideos.map((video) => (
-                    <li key={video.id}>
-                        <CardVideo>
-                            <a href={video.url}>
-                                <img src={video.thumbnail} alt={video.title} />
-                            </a>
-                            <figcaption>
-                                <h3>{video.title}</h3>
-                                <BotaoCard />
-                            </figcaption>
-                        </CardVideo>
-                    </li>
-                ))
-            
-            } </ListaSeções>
+        <div>
+            {listaVideos.map((secao) => (
+                <div key={secao.id}>
+                    <h2>{secao.section}</h2>
+                    <ListaSeções>
+                        {secao.videos.map((video) => (
+                            <li key={video.id}>
+                                <CardVideo>
+                                    <a href={video.url} target="_blank" rel="noopener noreferrer">
+                                        <img src={video.thumbnail} alt={video.title} />
+                                    </a>
+                                    <figcaption>
+                                        <h3>{video.title}</h3>
+                                        <BotaoCard />
+                                    </figcaption>
+                                </CardVideo>
+                            </li>
+                        ))}
+                    </ListaSeções>
+                </div>
+            ))}
+        </div>
     );
 }
