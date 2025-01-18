@@ -11,8 +11,8 @@ export const VideoProvider = ({ children }) => {
             .then(response => response.json())
             .then(data => setListaVideos(data))
             .catch(error => console.error('Erro ao buscar vídeos:', error));
-    }, []);
-
+          }, []);
+          
     const deletaVideo = (id) => {
       console.log("Deletando vídeo com ID:", id);
       setListaVideos(prevVideos => {

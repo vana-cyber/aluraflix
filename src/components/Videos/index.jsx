@@ -7,16 +7,17 @@ import BotaoCard from "components/BotaoCard";
 const ListaSeções = styled.div`
     margin-left: 2rem;
     display: flex;
-    flex-direction: row;
-    width: 85rem;
+    flex-flow: row wrap;
+    width: 95rem;
     gap: 2rem;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     `;
 
 const ListaVideos = styled.ul`
     display: flex;
-    flex-flow: column;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 5rem;
     list-style: none;
     width: 100%;
     `;
@@ -93,7 +94,7 @@ export default function Videos() {
                                         </a>
                                         <figcaption>
                                             <h3>{video.title}</h3>
-                                            <BotaoCard />
+                                            <BotaoCard video={video.id}/>
                                         </figcaption>
                                     </CardVideo>
                                 </CardVideoEstilizado>

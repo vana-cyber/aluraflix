@@ -30,18 +30,17 @@ const BotaoConteiner = styled.div`
 `
 
 export default function BotaoCard({ video }) {
-    
+    console.log("Video recebido:", video); 
     const { deletaVideo } = useContext(VideoContext);
     // const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleDelete = () => {
-        deletaVideo(video.id);
-        console.log("ID do vídeo a ser deletado:", video.id); 
+        deletaVideo(video);
     }
 
     return (
         <BotaoConteiner>
-            <Botao type="button" onClick={() => {handleDelete}}>
+            <Botao type="button" onClick={handleDelete}>
                 <FaRegTrashAlt />
                 DELETAR
             </Botao>

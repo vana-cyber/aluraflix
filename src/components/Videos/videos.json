@@ -3,7 +3,7 @@
     {
       "id": 1,
       "section": "FRONT-END",
-     "color": "#63c5e6;",
+      "color": "#63c5e6;",
       "videos": [
         {
           "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
@@ -43,6 +43,20 @@
           "url": "https://www.youtube.com/embed/watch?v=3EkS9-P3cIM&t=86s",
           "thumbnail": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fapps...",
           "descricao": "aeioua"
+        },
+        {
+          "title": "PASSO A PASSO: crie a estrutura e a funcionalidade de um FORMULÁRIO DE LOGIN",
+          "id": 1737237920358,
+          "url": "https://www.youtube.com/embed/m4ORMy802r8?si=m6JW9xWv0mmDoCqF",
+          "thumbnail": "https://img.youtube.com/vi/m4ORMy802r8/maxresdefault.jpg",
+          "descricao": "🤖 NA PRÁTICA: como fazer a estrutura e a funcionalidade de um FORMULÁRIO DE LOGIN em 12 minutos\n"
+        },
+        {
+          "title": "PASSO A PASSO: crie a estrutura e a funcionalidade de um FORMULÁRIO DE LOGIN",
+          "id": 1737238134414,
+          "url": "https://www.youtube.com/embed/m4ORMy802r8?si=m6JW9xWv0mmDoCqF",
+          "thumbnail": "https://img.youtube.com/vi/m4ORMy802r8/maxresdefault.jpg",
+          "descricao": " NA PRÁTICA: como fazer a estrutura e a funcionalidade de um FORMULÁRIO DE LOGIN em 12 minutos"
         }
       ]
     },
