@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { NavLink } from "react-router";
+import MenuItem from "components/MenuItem";
 
 const MenuNav = styled.nav`
     display: flex;
@@ -7,7 +8,7 @@ const MenuNav = styled.nav`
 `;
 
 const Navegacao = styled(NavLink)`
-    &.active li {
+    &.active button {
         color: "#2271D1";
         text-decoration: none; /* Adicione se quiser remover sublinhado */
         transition: all 0.3s ease;

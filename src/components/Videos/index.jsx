@@ -7,7 +7,7 @@ import BotaoCard from "components/BotaoCard";
 const ListaSeções = styled.div`
     display: flex;
     flex-direction: row;
-    width: 400px;
+    width: 85rem;
     gap: 2rem;
     overflow: auto;
     `;
