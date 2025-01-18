@@ -1,26 +1,24 @@
 import styled from "styled-components";
 import { useContext } from "react";
-import { VideoContext } from '@/context/VideoContext';  
-// import videos from "./videos.json";
+import { VideoContext } from '@/context/VideoContext';
 import BotaoCard from "components/BotaoCard";
-// import EstilosGlobais from "components/EstilosGlobais";
-// import axios from "axios";
-// import React, { useEffect, useState } from 'react';
+
 
 const ListaSeções = styled.div`
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: row;
+    width: 400px;
     gap: 2rem;
-    width: 100%;
+    overflow: auto;
     `;
 
-// const ListaVideos = styled.ul`
-//     display: flex;
-//     flex-direction: row;
-//     gap: 0.5rem;
-//     list-style: none;
-//     width: 100%;
-//     `;
+const ListaVideos = styled.ul`
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+    list-style: none;
+    width: 100%;
+    `;
 
 const CardVideo = styled.figure`
     width: 350px;
@@ -36,35 +34,36 @@ const CardVideo = styled.figure`
     }
 `;
 
-// const DivEstilizada = styled.div`
-//     padding: 1rem;
-//     width: 350px;
-//     border-radius: 1.5rem;
-//     background-color: var(--cor-${props => props.section});
-//     text-align: center;
-//     margin-left: 5rem;
-//     margin-top: 2rem;
-//     justify-content: center;
-// `
+const DivEstilizada = styled.div`
+    padding: 1rem;
+    width: 350px;
+    border-radius: 1.5rem;
+    background-color: var(--cor-${props => props.section});
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    justify-content: center;
+`
 
-// const Titulo = styled.h2`
-//     margin-left: 0.8rem;
-//     font-weight: bold;
-// `
+const Titulo = styled.h2`
+    margin-left: 0.8rem;
+    font-weight: bold;
+`
 
 export default function Videos() {
 
     const { listaVideos } = useContext(VideoContext);
 
-    
+
     if (!listaVideos || !Array.isArray(listaVideos)) {
         return <p>Nenhum vídeo disponível.</p>;
     }
     return (
-        <div>
+        <ListaVideos>
             {listaVideos.map((secao) => (
-                <div key={secao.id}>
-                    <h2>{secao.section}</h2>
+                <DivEstilizada key={secao.id}>
+                    <Titulo>{secao.section}</Titulo>
+
                     <ListaSeções>
                         {secao.videos.map((video) => (
                             <li key={video.id}>
@@ -80,8 +79,8 @@ export default function Videos() {
                             </li>
                         ))}
                     </ListaSeções>
-                </div>
+                </DivEstilizada>
             ))}
-        </div>
+        </ListaVideos>
     );
 }

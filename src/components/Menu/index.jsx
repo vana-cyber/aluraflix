@@ -1,10 +1,22 @@
-import MenuLink from "../MenuLink";
 import { styled } from "styled-components";
+import { NavLink } from "react-router";
 
 const MenuNav = styled.nav`
     display: flex;
     flex-direction: row;
 `;
+
+const Navegacao = styled(NavLink)`
+    &.active li {
+        color: "#2271D1";
+        text-decoration: none; /* Adicione se quiser remover sublinhado */
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-color: "#2271D1";
+        border: 2.5px solid;
+        box-shadow: 0px 0px 0.75rem 0.25rem #2271d1 inset;
+    }
+    `
 
 const MenuLista = styled.ul`
     display: flex;
@@ -13,25 +25,21 @@ const MenuLista = styled.ul`
     gap: 2.5rem;
 `;
 
-const MenuItem = styled.li`
-    margin-left: 20px;
-`;
 
-   
 export default function Menu() {
     return (
         <MenuNav>
             <MenuLista>
-                <MenuItem>
-                    <MenuLink to="/" ativo={true} end>
+                <Navegacao to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+                    <MenuItem>
                         HOME
-                    </MenuLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuLink to="/novovideo">
+                    </MenuItem>
+                </Navegacao>
+                <Navegacao to="/novovideo" className={({ isActive }) => (isActive ? "active" : "")}>
+                    <MenuItem>
                         NOVO VÍDEO
-                    </MenuLink>
-                </MenuItem>
+                    </MenuItem>
+                </Navegacao>
             </MenuLista>
         </MenuNav>
     );
