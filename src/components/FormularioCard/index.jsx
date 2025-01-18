@@ -1,8 +1,8 @@
 import { styled } from 'styled-components';
 import { useContext } from 'react';
-import { VideoContext } from '@/context/VideoContext'; 
 import { useState } from 'react';
 import ListaSuspensa from 'components/ListaSuspensa';
+import { VideoContext } from 'context/VideoContext';
 
 const Formulario = styled.form`
     display: flex;

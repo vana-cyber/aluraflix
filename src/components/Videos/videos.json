@@ -3,6 +3,7 @@
     {
       "id": 1,
       "section": "FRONT-END",
+     "color": "#63c5e6;",
       "videos": [
         {
           "title": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
@@ -48,6 +49,7 @@
     {
       "id": 2,
       "section": "BACK-END",
+      "color": "#65e965",
       "videos": [
         {
           "title": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei | #HipstersPontoTube",
@@ -72,6 +74,7 @@
     {
       "id": 3,
       "section": "MOBILE",
+      "color": "#f3db00",
       "videos": [
         {
           "title": "Desenvolvimento Android #HipstersPontoTube",

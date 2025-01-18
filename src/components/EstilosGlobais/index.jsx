@@ -9,9 +9,6 @@ const EstilosGlobais = createGlobalStyle`
   --cor-borda-card: #6BD1FF;
   --cor-fonte-1: #F5F5F5;
   -cor-fonte-2: #757575;
-  --cor-front-end: #63c5e6;
-  --cor-back-end: #65e965;
-  --cor-mobile: #f3db00;
   --fonte-principal: 'Roboto', sans-serif;
 
 }

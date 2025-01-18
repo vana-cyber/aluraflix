@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const Item = styled.button`
     background-color: transparent; 
-     cursor: pointer;
+    cursor: pointer;
     margin-left: 20px;
      padding: 1rem;
      width: 9rem;
