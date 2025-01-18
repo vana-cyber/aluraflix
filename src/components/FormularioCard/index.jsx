@@ -11,6 +11,7 @@ const Formulario = styled.form`
     max-width: 40rem;
     padding: 1.5rem;
     width: 100%;
+    margin-left: 6rem;
 `
 
 const Label = styled.label`
@@ -132,6 +133,7 @@ export default function FormularioCard() {
                 setThumbnail('');
                 setUrl('');
                 setDescricao('');
+                
             } else {
                 console.error('Seção não encontrada');
             }
