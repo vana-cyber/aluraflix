@@ -4,16 +4,16 @@
 
 ### Tópicos 
 
-:small_blue_diamond: [Descrição do projeto](#📝-descrição-do-projeto)
+:small_blue_diamond: [Descrição do projeto](#memo-descrição-do-projeto)
 
 :small_blue_diamond: [Funcionalidades do projeto](#hammer-funcionalidades-do-projeto)
 
-:small_blue_diamond: [Deploy da Aplicação](#📤-deploy)
+:small_blue_diamond: [Deploy da Aplicação](#arrow-up-deploy)
 
-:small_blue_diamond: [Linguagens e tecnologias](#🛠️-linguagens-e-tecnologias)
+:small_blue_diamond: [Linguagens e tecnologias](#wrench-linguagens-e-tecnologias)
 
 
-## 📝 Descrição do projeto
+## :memo: Descrição do projeto
 <p align="justify">Challenge proposto pela <strong>Alura e Oracle One</strong>. Trata-se de uma aplicação React para armazenamento de vídeos. O objetivo do desafio é colocar em prática o desenvolvimento de iterfaces dinâmicas utilizando a biblioteca React.js.</p>
 
 
@@ -25,7 +25,7 @@
 - `Funcionalidade 4`: deletar vídeos
 
 
-## 📤 Deploy
+## :arrow_up: Deploy
 
 O deploy do projeto será realizado em breve. Passos planejados para o deploy:
 
@@ -38,7 +38,7 @@ Link de acesso será adicionado aqui assim que o deploy for concluído.
 
 
 
-## 🛠️ Linguagens e tecnologias
+## :wrench: Linguagens e tecnologias
 
 - **React (JavaScript)**💻: Biblioteca para construção da interface de usuário.
 - **Styled-components (CSS-in-JS)**🎨: Biblioteca para estilização baseada em componentes.
