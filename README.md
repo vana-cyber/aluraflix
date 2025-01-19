@@ -14,7 +14,7 @@
 
 
 ## :memo: Descrição do projeto
-<p align="justify">Challenge proposto pela <strong>Alura e Oracle One</strong>. Trata-se de uma aplicação React para armazenamento de vídeos. O objetivo do desafio é colocar em prática o desenvolvimento de iterfaces dinâmicas utilizando a biblioteca React.js.</p>
+<p align="justify">Challenge proposto pela <strong>Alura e Oracle One</strong>. Trata-se de uma aplicação React para armazenamento de vídeos. O objetivo do desafio é colocar em prática o desenvolvimento de interfaces dinâmicas utilizando a biblioteca React.js.</p>
 
 
 ## :hammer: Funcionalidades do projeto
@@ -40,9 +40,9 @@ Link de acesso será adicionado aqui assim que o deploy for concluído.
 
 ## :wrench: Linguagens e tecnologias
 
-- <bold>React (JavaScript)</bold>💻: Biblioteca para construção da interface de usuário.
-- <bold>Styled-components (CSS-in-JS)</bold>🎨: Biblioteca para estilização baseada em componentes.
-- <bold>JSON Server</bold>🗃️: Ferramenta para simulação de uma API RESTful.
+- <strong>React (JavaScript)</strong>💻: Biblioteca para construção da interface de usuário.
+- <strong>Styled-components (CSS-in-JS)</strong>🎨: Biblioteca para estilização baseada em componentes.
+- <strong>JSON Server</strong>🗃️: Ferramenta para simulação de uma API RESTful.
 
 
 # 👩‍💻 Autora
