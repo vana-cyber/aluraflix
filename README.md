@@ -40,9 +40,9 @@ Link de acesso será adicionado aqui assim que o deploy for concluído.
 
 ## :wrench: Linguagens e tecnologias
 
-- __React (JavaScript)__💻: Biblioteca para construção da interface de usuário.
-- __Styled-components (CSS-in-JS)__🎨: Biblioteca para estilização baseada em componentes.
-- __JSON Server__🗃️: Ferramenta para simulação de uma API RESTful.
+- <bold>React (JavaScript)</bold>💻: Biblioteca para construção da interface de usuário.
+- <bold>Styled-components (CSS-in-JS)</bold>🎨: Biblioteca para estilização baseada em componentes.
+- <bold>JSON Server</bold>🗃️: Ferramenta para simulação de uma API RESTful.
 
 
 # 👩‍💻 Autora
