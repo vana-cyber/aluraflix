@@ -8,7 +8,7 @@
 
 :small_blue_diamond: [Funcionalidades do projeto](#hammer-funcionalidades-do-projeto)
 
-:small_blue_diamond: [Deploy da Aplicação](#arrow-up-deploy)
+:small_blue_diamond: [Deploy da Aplicação](#arrow_up-deploy)
 
 :small_blue_diamond: [Linguagens e tecnologias](#wrench-linguagens-e-tecnologias)
 
@@ -40,9 +40,9 @@ Link de acesso será adicionado aqui assim que o deploy for concluído.
 
 ## :wrench: Linguagens e tecnologias
 
-- **React (JavaScript)**💻: Biblioteca para construção da interface de usuário.
-- **Styled-components (CSS-in-JS)**🎨: Biblioteca para estilização baseada em componentes.
-- **JSON Server**🗃️: Ferramenta para simulação de uma API RESTful.
+- __React (JavaScript)__💻: Biblioteca para construção da interface de usuário.
+- __Styled-components (CSS-in-JS)__🎨: Biblioteca para estilização baseada em componentes.
+- __JSON Server__🗃️: Ferramenta para simulação de uma API RESTful.
 
 
 # 👩‍💻 Autora
