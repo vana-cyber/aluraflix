@@ -4,13 +4,13 @@
 
 ### Tópicos 
 
-:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+:small_blue_diamond: [Descrição do projeto](#📝-descrição-do-projeto)
 
-:small_blue_diamond: [Funcionalidades do projeto](#funcionalidades-do-projeto)
+:small_blue_diamond: [Funcionalidades do projeto](#hammer-funcionalidades-do-projeto)
 
-:small_blue_diamond: [Deploy da Aplicação](#deploy)
+:small_blue_diamond: [Deploy da Aplicação](#📤-deploy)
 
-:small_blue_diamond: [Linguagens e tecnlogias](#linguagens-e-tecnologias)
+:small_blue_diamond: [Linguagens e tecnologias](#🛠️-linguagens-e-tecnologias)
 
 
 ## 📝 Descrição do projeto
@@ -45,7 +45,7 @@ Link de acesso será adicionado aqui assim que o deploy for concluído.
 - **JSON Server**🗃️: Ferramenta para simulação de uma API RESTful.
 
 
-# Autora👩‍💻
+# 👩‍💻 Autora
 
 | [<img loading="lazy" src="https://github.com/vana-cyber.png" width=115><br><sub>Geovana da Frota Ferreira</sub>](https://github.com/vana-cyber) |
 | :---: |
