@@ -30,7 +30,6 @@ const BotaoConteiner = styled.div`
 `
 
 export default function BotaoCard({ video }) {
-    console.log("Video recebido:", video); 
     const { deletaVideo } = useContext(VideoContext);
     // const [isModalOpen, setIsModalOpen] = useState(false);
 
